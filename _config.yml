@@ -1,13 +1,13 @@
 # Site settings
-title: Junpeng Feng Blog
+title: Welcome to My Blog!
 SEOTitle: 冯俊鹏的博客 | Blog
 header-img: img/post-bg-desk.jpg
 email: fjp2016150081@gmail.com
 description: "Don't be evil!"
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
+keyword: "程序员，工程师，java，数据库，实习，公务员，大数据，深圳大学"
 url: "http://fengjunpeng.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/fengjunpeng/fengjunpeng.github.io.git" # you code repository
+github_repo: "https://github.com/fengjunpeng/fengjunpeng.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -64,8 +64,8 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
+  repo: fengjunpeng.github.io    #仓库名称
+  owner: fengjunpeng    #github用户名
   admin: qiubaiying
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
