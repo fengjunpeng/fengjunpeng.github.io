@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A",
+            "request": "launch",
+            "mainClass": "A",
+            "java.home":"C:\\Program Files\\Java\\jdk1.8.0_211"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "java.home":"C:\\Program Files\\Java\\jdk1.8.0_211"
+        }
+    ]
+}
