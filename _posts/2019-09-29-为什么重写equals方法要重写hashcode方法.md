@@ -44,9 +44,35 @@ public boolean equals(Object obj){
 } 
 ```
 
+##  hashCode 方法
 
+hashCode 方法作用是获得 hash 码，实际上是一个 int 型的整数，用来表示对象在散列表中的索引的位置。散列表存储的是键值对，通过键可以快速获得值。
 
+如果两个对象相等，那么他们的 hashCode 必然相等。但是反之不一定相等。
 
+##  equals 和 hashCode 方法
+
+如果没有涉及到散列表，是没必要重写 hashCode 方法。
+
+### 1、不会创建散列表的情况
+
+就是和 hashtable hashmap hashset 没有一点关系的，重写 equals 方法就行
+
+重写四步走
+
+1、判空
+
+2、判类
+
+3、判等于
+
+4、判内容
+
+### 2、创建散列表情况
+
+两个对象内容一样，但是地址不一样。用 equals 判断出来，两个对象相等，所以按理说两个对象的 hashCode 一定相等。实际上这两个对象的 hashCode 不一定相等。
+
+重写 hashCode 可以这样，用其属性字段的 hashCode 异或其他属性字段的 hashCode 。
 
 
 [https://www.cnblogs.com/skywang12345/p/3324958.html](https://www.cnblogs.com/skywang12345/p/3324958.html)
