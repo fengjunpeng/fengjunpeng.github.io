@@ -85,3 +85,32 @@ show variables like 'autocommit';
 打印展示创建的表
 
 show create table 表名;
+
+查看表结构
+
+desc < 表名 >
+
+##  多表连接查询
+
+MySQL不支持OUTER JOIN，可以使用 UNION 来实现。
+
+### 1、内链接
+
+内连接INNER JOIN是最常用的连接操作。从数学的角度讲就是求两个表的交集，从笛卡尔积的角度讲就是从笛卡尔积中挑出ON子句条件成立的记录。
+
+### 2、连接 left join，left outer join ，right join， right outer join， union
+
+右连接 RIGHT JOIN
+
+左连接 LEFT JOIN 的含义就是求两个表A表和B表的交集外加左表剩下的数据。依旧从笛卡尔积的角度讲，就是先从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表A表中剩余的记录（见最后三条）。
+
+右连接 RIGHT JOIN
+
+右连接 RIGHT JOIN 就是求两个表A和B表的交集外加右表B剩下的数据。再次从笛卡尔积的角度描述，右连接就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上右表中剩余的记录（见最后一条）
+
+外连接 FULL OUTER JOIN
+
+外连接就是求两个表A和B集合的并集
+
+
+
