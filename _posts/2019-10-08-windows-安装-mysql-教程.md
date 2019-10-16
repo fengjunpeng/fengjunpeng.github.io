@@ -92,8 +92,6 @@ desc < 表名 >
 
 ##  多表连接查询
 
-MySQL不支持OUTER JOIN，可以使用 UNION 来实现。
-
 ### 1、内链接
 
 内连接INNER JOIN是最常用的连接操作。从数学的角度讲就是求两个表的交集，从笛卡尔积的角度讲就是从笛卡尔积中挑出ON子句条件成立的记录。
@@ -110,7 +108,22 @@ MySQL不支持OUTER JOIN，可以使用 UNION 来实现。
 
 外连接 FULL OUTER JOIN
 
-外连接就是求两个表A和B集合的并集
+外连接就是求两个表A和B集合的并集,MySQL不支持OUTER JOIN，可以使用 UNION 来实现。
 
+---
+
+打印出表索引
+
+SHOW INDEX FROM employees.titles;
+
+---
+
+查看索引的使用情况
+
+EXPLAIN SELECT * FROM employees.titles WHERE emp_no='10001' AND title='Senior Engineer' AND from_date='1986-06-26';
+
+ref字段
+
+---
 
 
