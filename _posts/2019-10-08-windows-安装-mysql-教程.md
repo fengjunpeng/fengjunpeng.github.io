@@ -86,9 +86,11 @@ show variables like 'autocommit';
 
 show create table 表名;
 
-查看表结构
+查看表结构（属性结构）
 
 desc < 表名 >
+
+SHOW FIELDS FROM 视图名
 
 ##  多表连接查询
 
@@ -123,6 +125,33 @@ SHOW INDEX FROM employees.titles;
 EXPLAIN SELECT * FROM employees.titles WHERE emp_no='10001' AND title='Senior Engineer' AND from_date='1986-06-26';
 
 ref字段
+
+---
+
+创建视图
+
+create view 视图名 (参数1，参数2...) as ...，后面 ... 代表 select 某个表的数据
+
+---
+
+修改视图
+
+CREATE OR REPLACE VIEW 视图名 AS SELECT [ ... ] FROM [ ... ]
+
+---
+
+WITH CHECK OPTION
+
+如果在创建视图的时候制定了“WITH CHECK OPTION”，那么更新数据时不能 插入或更新 不符合视图限制条件的记录。
+
+通过视图所做的修改，必须在视图的可见范围内：  
+- 假设INSERT，新增的记录在视图仍可查看  
+- 假设UPDATE，修改后的结果必须能通过视图查看到  
+- 假设DELETE，只能删除现有视图里能查到的记录  
+
+如：create view v_price as select * from product where price >= 3000 with check option;
+
+一般来说没有特殊理由，建议加上 with check option 命令
 
 ---
 
